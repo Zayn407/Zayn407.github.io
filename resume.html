@@ -36,14 +36,6 @@
             margin-bottom: 20px;
         }
 
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .job-title {
-            font-weight: bold;
-        }
-
         button {
             padding: 10px 15px;
             font-size: 16px;
@@ -58,7 +50,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
     </style>
 </head>
 
@@ -66,7 +57,7 @@
     <h1>Shenfan Feng</h1>
     <p class="contact-info">
         (773) 668-3765 ▪ Chicago, IL ▪ <a href="mailto:zaynf407@gmail.com">zaynf407@gmail.com</a> ▪ 
-        <a href="Linkedin URL">LinkedIn</a> ▪ <a href="GitHub URL">GitHub</a>
+        <a href="http://linkedin.com/in/shenfan-feng-4006b6273">LinkedIn</a> ▪ <a href="https://github.com/Zayn407">GitHub</a>
     </p>
 
     <button onclick="toggleDetails('educationDetails')">EDUCATION</button>
@@ -88,7 +79,7 @@
 
     <button onclick="toggleDetails('workExperienceDetails')">RELEVANT WORK EXPERIENCE</button>
     <div id="workExperienceDetails" class="details">
-        <p class="job-title">Internship at Human-Machine Intelligent Systems Research Center, Shandong University</p>
+        <p><strong>Internship at Human-Machine Intelligent Systems Research Center, Shandong University</strong></p>
         <p>June - August 2023</p>
         <ul>
             <li>Tuned K210 board for improved cat breed recognition using Python in Maixpy IDE.</li>
@@ -100,26 +91,57 @@
 
     <button onclick="toggleDetails('projectsDetails')">PROJECTS</button>
     <div id="projectsDetails" class="details">
-        <!--...项目细节（类似之前的结构）...-->
+        <h3>Wake Up People Who Do Not Want To Get Up</h3>
+        <ul>
+            <li>Designed and implemented a user-friendly wake-up system to assist individuals with difficulty waking up.</li>
+            <li>Established communication between multiple Arduino boards utilizing I2C and UART communication.</li>
+            <li>Handled signal reception and processing, passing information to a one-digit, four-segment display for time and alarm presentation.</li>
+        </ul>
+
+        <h3>Animated Bar Chart</h3>
+        <p>July-August 2022</p>
+        <ul>
+            <li>Focused on presenting year-to-year changes in data, making it more accessible and engaging for users</li>
+            <li>Employed animation techniques for a dynamic interface highlighting trends</li>
+            <li>Developed an interactive animated bar chart using the C to improve data visualization</li>
+        </ul>
+
+        <h3>Knight Escape</h3>
+        <p>March-April 2021</p>
+        <ul>
+            <li>Developed a strategic video game called "Knight's Escape" using C++ programming language</li>
+            <li>Implemented chessboard logic and knight movement rules to create engaging gameplay</li>
+            <li>Utilized problem-solving and algorithmic skills to design challenging levels and scenarios</li>
+        </ul>
     </div>
 
     <button onclick="toggleDetails('volunteerDetails')">VOLUNTEER EXPERIENCE</button>
     <div id="volunteerDetails" class="details">
-        <!--...志愿者经验细节...-->
+        <h3>Bank of America Chicago Marathon, Chicago, IL</h3>
+        <ul>
+            <li>Assisted in various tasks and supported event coordination during the marathon</li>
+        </ul>
+        
+        <h3>UI health waste audit, Chicago, IL</h3>
+        <ul>
+            <li>Weighing garbage to study people's habits</li>
+        </ul>
     </div>
 
     <button onclick="toggleDetails('awardsDetails')">AWARDS</button>
     <div id="awardsDetails" class="details">
-        <!--...奖项细节...-->
+        <ul>
+            <li>Dean’s List in Fall 2022, University of Illinois Chicago(UIC)</li>
+        </ul>
     </div>
 
     <script>
         function toggleDetails(id) {
-            var details = document.getElementById(id);
-            if (details.style.display === 'none') {
-                details.style.display = 'block';
+            let detailDiv = document.getElementById(id);
+            if (detailDiv.style.display === "none" || detailDiv.style.display === "") {
+                detailDiv.style.display = "block";
             } else {
-                details.style.display = 'none';
+                detailDiv.style.display = "none";
             }
         }
     </script>
